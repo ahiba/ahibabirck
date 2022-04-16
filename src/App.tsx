@@ -1,20 +1,13 @@
 import React from 'react'
 
-import { Button } from './build/index'
-// import Menu from './components/Menu/menu'
-// import MenuItem from './components/Menu/menuItem'
-// import SubMenu from './components/Menu/subMenu'
-// import Icon from './components/Icon/icon'
-// import Button from './components/Button/button'
-import { Menu } from './build/index';
+import Menu from './components/Menu/menu'
+import MenuItem from './components/Menu/menuItem'
+import SubMenu from './components/Menu/subMenu'
+import Icon from './components/Icon/icon'
+import Button from './components/Button/button'
 
-// import './styles/index.scss'
-import './build/index.css';
+import './styles/index.scss'
 
-// @ts-ignore
-const MenuItem = Menu.Item;
-// @ts-ignore
-const SubMenu = Menu.SubMenu;
 
 function App() {
   return (
