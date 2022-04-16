@@ -1,7 +1,6 @@
 import React from 'react'
 import { render, fireEvent, screen } from '@testing-library/react'
 import Button from './button'
-import { iterator } from 'core-js/library/es6/symbol'
 
 
 describe('test Button component', () => {
