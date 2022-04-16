@@ -23,7 +23,7 @@
     "fortawesome": "^0.0.1-security",  
     "react-transition-group": "^4.4.2"
   },
-  "peerDependencies": {
+  "devDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
     "@babel/core": "^7.16.0",
@@ -83,7 +83,7 @@
     "identity-obj-proxy": "^3.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3"
   },
-  "devDependencies": {
+  "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
   },
