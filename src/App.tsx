@@ -4,6 +4,8 @@ import Button from './components/Button/button'
 import Menu from './components/Menu/menu'
 import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu'
+import Tabs from './components/Tabs/tabs'
+import TabItem from './components/Tabs/tabItem'
 
 import './styles/index.scss'
 
@@ -24,6 +26,16 @@ function App() {
           <MenuItem>3</MenuItem>
         </SubMenu>
       </Menu>
+      <Tabs  styleType="outline" >
+        <TabItem label="card1">this is on card1</TabItem>
+        <TabItem label="card2">
+          <div style={{ width: '100px', height: '100px', background: 'red' }}>
+            花红袄 绿头巾
+          </div>
+        </TabItem>
+        <TabItem label="card3">this is on card3</TabItem>
+        <div>55555</div>
+      </Tabs>
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload.
