@@ -1,12 +1,12 @@
-import { RefObject, useEffect } from 'react'
+import React, { RefObject, useEffect } from 'react'
 
-function useClickOutSide (ref: RefObject<HTMLElement>, handler: Function) {
-    useEffect(() =>{
-        const listener = (event: MouseEvent) =>{
-            if(!ref.current || ref.current.contains(event.target as HTMLElement)) {
+function useClickOutSize(ref: RefObject<HTMLElement>, handler: Function) {
+    useEffect(() => {
+        const listener = (event: MouseEvent) => {
+            if (!ref.current || ref.current.contains(event.target as HTMLElement)) {
                 return
             }
-            handler(event)  
+            handler(event)
         }
         document.addEventListener('click', listener)
         return () => {
@@ -15,4 +15,4 @@ function useClickOutSide (ref: RefObject<HTMLElement>, handler: Function) {
     }, [ref, handler])
 }
 
-export default useClickOutSide
+export default useClickOutSize

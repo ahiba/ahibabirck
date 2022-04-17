@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import Icon from '../Icon/icon'
 
-type IInputProps = InputHTMLAttributes<HTMLElement> & {
+export type InputProps = InputHTMLAttributes<HTMLElement> & {
     disabled?: boolean,
     size?: 'lg' | 'sm',
     icon?: IconProp, // todo 需优化
@@ -13,7 +13,7 @@ type IInputProps = InputHTMLAttributes<HTMLElement> & {
     onChange? : (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input:React.FC<IInputProps> = (props) => {
+const Input:React.FC<InputProps> = (props) => {
     // 取出所有的属性
     const { disabled, size, icon, prepend, append, style, ...restProps } = props
     // 根据不同的属性计算className
