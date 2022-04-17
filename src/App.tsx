@@ -10,6 +10,7 @@ import Tabs from './components/Tabs/tabs'
 import TabItem from './components/Tabs/tabItem'
 import Icon from './components/Icon/icon'
 import Transition from './components/Transition/transition'
+import Input from './components/Input/input'
 
 import './styles/index.scss'
 
@@ -21,6 +22,7 @@ function App() {
   const [ show, setShow ] = useState(false)
   return (
     <div className="App">
+      <Input icon="coffee" prepend="www" />
       <Icon icon="coffee" theme="primary" size="lg" />
       <Icon icon="arrow-down" theme="info" size="lg" />
       <Button disabled>Hello</Button>
