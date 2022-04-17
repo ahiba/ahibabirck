@@ -1,4 +1,6 @@
 import React from 'react'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import Button from './components/Button/button'
 import Menu from './components/Menu/menu'
@@ -6,13 +8,18 @@ import MenuItem from './components/Menu/menuItem'
 import SubMenu from './components/Menu/subMenu'
 import Tabs from './components/Tabs/tabs'
 import TabItem from './components/Tabs/tabItem'
+import Icon from './components/Icon/icon'
 
 import './styles/index.scss'
+
+library.add(fas)
 
 
 function App() {
   return (
     <div className="App">
+      <Icon icon="coffee" theme="primary" size="lg" />
+      <Icon icon="arrow-down" theme="info" size="lg" />
       <Button disabled>Hello</Button>
       <Button >Hello</Button>
       <Button  href="http://baidu.com">baidu link</Button>
