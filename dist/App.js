@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import Button from './components/Button/button';
-import Menu from './components/Menu/menu';
-import MenuItem from './components/Menu/menuItem';
-import SubMenu from './components/Menu/subMenu';
-import Tabs from './components/Tabs/tabs';
-import TabItem from './components/Tabs/tabItem';
 import Icon from './components/Icon/icon';
 import Transition from './components/Transition/transition';
 import Input from './components/Input/input';
@@ -26,20 +21,6 @@ function App() {
         React.createElement(Button, { disabled: true }, "Hello"),
         React.createElement(Button, null, "Hello"),
         React.createElement(Button, { href: "http://baidu.com" }, "baidu link"),
-        React.createElement(Menu, { defaultIndex: '0', onSelect: function (index) { alert(index); } },
-            React.createElement(MenuItem, null, "122"),
-            React.createElement(MenuItem, { disabled: true }, "122"),
-            React.createElement(MenuItem, null, "3"),
-            React.createElement(SubMenu, { title: "dropdown" },
-                React.createElement(MenuItem, null, "122"),
-                React.createElement(MenuItem, { disabled: true }, "122"),
-                React.createElement(MenuItem, null, "3"))),
-        React.createElement(Tabs, { styleType: "outline" },
-            React.createElement(TabItem, { label: "card1" }, "this is on card1"),
-            React.createElement(TabItem, { label: "card2" },
-                React.createElement("div", { style: { width: '100px', height: '100px', background: 'red' } }, "\u82B1\u7EA2\u8884 \u7EFF\u5934\u5DFE")),
-            React.createElement(TabItem, { label: "card3" }, "this is on card3"),
-            React.createElement("div", null, "55555")),
         React.createElement(Button, { onClick: function () { return setShow(!show); } }, "toggle"),
         React.createElement(Transition, { in: show, timeout: 300, animation: "zoom-in-right" },
             React.createElement("div", null,

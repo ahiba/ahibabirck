@@ -8,6 +8,7 @@ export interface MenuProps {
     style?: React.CSSProperties;
     onSelect?: SelectCallback;
     defaultOpenSubMenus?: string[];
+    children?: React.ReactNode;
 }
 interface IMenuContext {
     index: string;
