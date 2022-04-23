@@ -1,2 +1,2 @@
-declare function useDebounce(value: any, delay?: number): any;
-export default useDebounce;
+declare function useDebouncee(value: any, delay?: number): any;
+export default useDebouncee;

@@ -12,12 +12,12 @@ var __assign = (this && this.__assign) || function () {
 import React, { useContext, useState } from 'react';
 import classNames from 'classnames';
 import { MenuContext } from './menu';
-import Icon from '../Icon/icon';
+import Transition from '../Transition/transition';
 var SubMenu = function (_a) {
     var index = _a.index, title = _a.title, children = _a.children, className = _a.className;
     var context = useContext(MenuContext);
     var openedSubMenus = context.defaultOpenSubMenus;
-    var isOpened = (index && context.mode === 'vertical') ? openedSubMenus.includes(index) : false;
+    var isOpened = (index && context.mode === 'vertical') ? openedSubMenus.includes(index + '') : false;
     var _b = useState(isOpened), menuOpen = _b[0], setOpen = _b[1];
     var classes = classNames('menu-item submenu-item', className, {
         'is-active': context.index === index,
@@ -25,7 +25,6 @@ var SubMenu = function (_a) {
         'is-vertical': context.mode === 'vertical'
     });
     var handleClick = function (e) {
-        console.log('点击了');
         e.preventDefault();
         setOpen(!menuOpen);
     };
@@ -41,15 +40,13 @@ var SubMenu = function (_a) {
         onClick: handleClick
     } : {};
     var hoverEvents = context.mode !== 'vertical' ? {
-        onMouseEnter: function (e) {
-            handleMouse(e, true);
-        },
+        onMouseEnter: function (e) { handleMouse(e, true); },
         onMouseLeave: function (e) {
             handleMouse(e, false);
         }
     } : {};
     var renderChildren = function () {
-        var subMenuClasses = classNames('viking-submenu', {
+        var subMenuClasses = classNames('viking-submenu', className, {
             'menu-opened': menuOpen
         });
         var childrenComponent = React.Children.map(children, function (child, i) {
@@ -60,15 +57,15 @@ var SubMenu = function (_a) {
                 });
             }
             else {
-                console.error("Warning: SubMenu has a child which is not a MenuItem Component");
+                console.error('warning: submenu has a child which is not a MenuItem');
             }
         });
-        return (React.createElement("ul", { className: subMenuClasses }, childrenComponent));
+        return (React.createElement(Transition, { in: menuOpen, timeout: 10000, animation: "zoom-in-bottom" },
+            React.createElement("ul", { className: subMenuClasses }, childrenComponent),
+            React.createElement("h2", null, "22")));
     };
     return (React.createElement("li", __assign({ key: index, className: classes }, hoverEvents),
-        React.createElement("div", __assign({ className: "submenu-title" }, clickEvents),
-            title,
-            React.createElement(Icon, { icon: "angle-down", className: "arrow-icon" })),
+        React.createElement("div", __assign({ className: "submenu-title" }, clickEvents), title),
         renderChildren()));
 };
 SubMenu.displayName = 'SubMenu';

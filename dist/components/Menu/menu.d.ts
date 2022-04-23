@@ -3,7 +3,7 @@ declare type MenuMode = 'horizontal' | 'vertical';
 declare type SelectCallback = (selectedIndex: string) => void;
 export interface MenuProps {
     defaultIndex?: string;
-    className?: string;
+    classname?: string;
     mode?: MenuMode;
     style?: React.CSSProperties;
     onSelect?: SelectCallback;

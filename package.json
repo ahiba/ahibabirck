@@ -1,6 +1,6 @@
 {
   "name": "ahibabrick",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "test",
   "author": "ahiba",
   "license": "MIT",
@@ -99,7 +99,7 @@
     "build": "npm run clean && npm run build-ts && npm run build-css",
     "test": "node scripts/test.js",
     "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss ./build/index.css",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

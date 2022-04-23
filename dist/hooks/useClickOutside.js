@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-function useClickOutSide(ref, handler) {
+function useClickOutSize(ref, handler) {
     useEffect(function () {
         var listener = function (event) {
             if (!ref.current || ref.current.contains(event.target)) {
@@ -13,4 +13,4 @@ function useClickOutSide(ref, handler) {
         };
     }, [ref, handler]);
 }
-export default useClickOutSide;
+export default useClickOutSize;

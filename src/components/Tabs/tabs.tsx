@@ -4,7 +4,7 @@ import { ItabItems } from './tabItem'
 
 type selectCallback = (selectIndex: number, disabled?:boolean) => void
 type TabStyle = "underline" | "outline"
-interface ITabs {
+export interface ITabs {
     defaultIndex?: number;
     onSelect?: selectCallback;
     className?: string;
