@@ -11,6 +11,7 @@ import TabItem from './components/Tabs/tabItem'
 import Icon from './components/Icon/icon'
 import Transition from './components/Transition/transition'
 import Input from './components/Input/input'
+import Upload from './components/upload/upload'
 
 import './styles/index.scss'
 
@@ -22,6 +23,14 @@ function App() {
   const [ show, setShow ] = useState(false)
   return (
     <div className="App">
+      <Upload 
+        drag
+        action="https://jsonplaceholder.typicode.com/posts"
+        onProgress={(percentage) => {
+          console.log('当前的percentage', percentage)
+        }}
+      />
+
       <Input icon="coffee" prepend="www" />
       <Icon icon="coffee" theme="primary" size="lg" />
       <Icon icon="arrow-down" theme="info" size="lg" />
