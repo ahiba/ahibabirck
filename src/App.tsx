@@ -37,26 +37,6 @@ function App() {
       <Button disabled>Hello</Button>
       <Button >Hello</Button>
       <Button  href="http://baidu.com">baidu link</Button>
-      <Menu defaultIndex={'0'} onSelect={(index) => {alert(index)}}>
-        <MenuItem>122</MenuItem>
-        <MenuItem disabled>122</MenuItem>
-        <MenuItem>3</MenuItem>
-        <SubMenu title="dropdown">
-          <MenuItem>122</MenuItem>
-          <MenuItem disabled>122</MenuItem>
-          <MenuItem>3</MenuItem>
-        </SubMenu>
-      </Menu>
-      <Tabs  styleType="outline" >
-        <TabItem label="card1">this is on card1</TabItem>
-        <TabItem label="card2">
-          <div style={{ width: '100px', height: '100px', background: 'red' }}>
-            花红袄 绿头巾
-          </div>
-        </TabItem>
-        <TabItem label="card3">this is on card3</TabItem>
-        <div>55555</div>
-      </Tabs>
       <Button onClick={() => setShow(!show)}>
         toggle
       </Button>

@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 interface DraggerProps {
     onFile: (files: FileList) => void;
+    children?: React.ReactNode
 }
 
 export const Dragger: FC<DraggerProps> = (props) => {

@@ -6,6 +6,7 @@ export interface ItabItems {
     isActive?: boolean;
     className?: string;
     disabled?: boolean;
+    children?: React.ReactNode;
 }
 
 const TabItem:React.FC<ItabItems> = ({ children, isActive, label, className }) => {

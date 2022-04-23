@@ -32,6 +32,7 @@ export interface UploadProps {
     accept?: string;
     multiple?: boolean;
     drag?: boolean;
+    children?: React.ReactNode,
 }
 
 const Upload:FC<UploadProps> = (props) => {

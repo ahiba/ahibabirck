@@ -9,6 +9,7 @@ export interface ITabs {
     onSelect?: selectCallback;
     className?: string;
     styleType?: TabStyle;
+    children?: React.ReactNode;
 }
 
 const Tabs:React.FC<ITabs> = ({ defaultIndex, onSelect, children, className, styleType }) => {
